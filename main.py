@@ -54,7 +54,7 @@ def lipinski(molecule):
 
 
 def admet(molecule):
-    absorption = "Good" if molecule.MW < 500 and m.logp < 5 else "Poor"
+    absorption = "Good" if molecule.MW < 500 and molecule.logp < 5 else "Poor"
     distribution = "Good" if molecule.psa < 140 else "Poor"
     metabolism = "Good" if 1 < molecule.logp < 5 else "Poor"
     excretion = "Good" if molecule.MW < 600 else "Poor"
@@ -110,3 +110,4 @@ if result:
 
 else:
     print("Molecule not found.")
+
